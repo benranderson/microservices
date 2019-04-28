@@ -13,7 +13,7 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 before_script:
-  - docker-compose -d --build
+  - docker-compose up -d --build
   - ./waitport.sh 5435
   - ./waitport.sh 5001
   - ./waitport.sh 80
