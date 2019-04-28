@@ -14,9 +14,6 @@ before_install:
 
 before_script:
   - docker-compose up -d --build
-  - ./waitport.sh 5435
-  - ./waitport.sh 5001
-  - ./waitport.sh 80
 
 script:
   - docker-compose exec users python manage.py test
